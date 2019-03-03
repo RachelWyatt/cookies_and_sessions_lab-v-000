@@ -5,7 +5,7 @@
 
 <h1> Your Current Cart: </h1>
 <% unless @cart.nil? %>
-<%= @cart.each do |product| %>
+<% @cart.each do |product| %>
   <% unless product.nil? %>
     <%= product %>
     <% end %>
