@@ -4,10 +4,10 @@
 <% end %>
 
 <h1> Your Current Cart: </h1>
-<% unless cart.nil? %>
-<% cart.each do |product| %>
-  <% unless product.nil? %>
-    <%= product %>
-    <% end %>
-    <% end %>
+  <% if cart.empty? %>
+    <p> Your cart is empty </p>
+  <% else %>
+    <% cart.each do |product| %>
+        <%= product %>
+  <% end %>
 <%end %>
