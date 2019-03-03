@@ -5,7 +5,8 @@ class ProductsController < ApplicationController
   end
 
   def add
-    @item = Item.find(params[:id])
-    current_cart << @item.id
+    @item = params[:cart]
+    cart << @item
+    redirect_to products_index_path
   end
 end
