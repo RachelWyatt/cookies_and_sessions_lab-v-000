@@ -1,6 +1,6 @@
-<%=form_for @item do |f| %>
-  <%=f.text_field :item %>
-  <%= f.submit %>
+<%= form_tag '/' do %>
+    <%= text_field_tag :product, params[:product] %>
+    <%= submit_tag "add to cart" %>
 <% end %>
 
 <h1> Your Current Cart: </h1>
